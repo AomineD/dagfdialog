@@ -101,6 +101,12 @@ private Boolean balean;
         dec = lay.findViewById(R.id.descr_wet);
         if(!balean){
             action.setVisibility(View.GONE);
+            cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    flis.onOk();
+                }
+            });
         }
         if(snim != null && !snim.isEmpty()) {
             animationView = lay.findViewById(R.id.anim_mainx);
