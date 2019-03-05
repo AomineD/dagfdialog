@@ -112,6 +112,7 @@ private String snim;
             heigh = heigh * 10;
             LinearLayout.LayoutParams f = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, heigh);
             lay.setLayoutParams(f);
+           // Log.e("MAIN", "onCreateView: SUR EBRO "+heigh);
         }
 
         cardView.setCardBackgroundColor(colorBack);
