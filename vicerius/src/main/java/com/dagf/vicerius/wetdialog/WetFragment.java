@@ -35,6 +35,7 @@ public class WetFragment extends Fragment {
     public static final String key_action_wet = "ASJDASJDJAJAJ";
     public static final String key_speed = "JAJAJAJSADLAD";
     public static final String key_anim = "JAJDAJAJASDSLF;";
+    public static final String key_visi = "KKSDWLASMMM";
 
     private long speed;
     private String descriptionw;
@@ -51,6 +52,7 @@ public class WetFragment extends Fragment {
 private LottieAnimationView animationView;
 
 private String snim;
+private Boolean balean;
 
 
     public WetFragment() {
@@ -75,6 +77,7 @@ private String snim;
             act = ff.getString(key_action_wet);
             ttile_ = ff.getString(key_title_wet);
             decs = ff.getString(key_desc_wt);
+            balean = ff.getBoolean(key_visi);
             snim = ff.getString(key_anim);
         }
     }
@@ -96,6 +99,9 @@ private String snim;
         action.startAnimation(ad);
         title = lay.findViewById(R.id.title_wet);
         dec = lay.findViewById(R.id.descr_wet);
+        if(!balean){
+            action.setVisibility(View.GONE);
+        }
         if(snim != null && !snim.isEmpty()) {
             animationView = lay.findViewById(R.id.anim_mainx);
             animationView.pauseAnimation();

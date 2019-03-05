@@ -72,4 +72,9 @@ public void Show(wetListener ok){
     fragmentManager.beginTransaction().replace(containerId, fragment).commitAllowingStateLoss();
 }
 
+
+public void visibleAction(boolean iff){
+    bundles.putBoolean(WetFragment.key_visi, iff);
+}
+
 }
