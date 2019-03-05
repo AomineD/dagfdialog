@@ -3,7 +3,7 @@ package com.dagf.vicerius.wetdialog;
 
 import android.os.Bundle;
 
-import androidx.fragment.app.FragmentManager;
+import android.support.v4.app.FragmentManager;
 
 public class WetDialog {
 
