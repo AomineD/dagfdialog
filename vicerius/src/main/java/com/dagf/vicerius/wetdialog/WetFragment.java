@@ -37,6 +37,9 @@ public class WetFragment extends Fragment {
     public static final String key_anim = "JAJDAJAJASDSLF;";
     public static final String key_visi = "KKSDWLASMMM";
 
+    public static final String key_color_card = "AJDASJDAJSD";
+    public static final String key_margin = "JASJDAJSDJA";
+
     private long speed;
     private String descriptionw;
     private String title_wet;
@@ -44,6 +47,8 @@ public class WetFragment extends Fragment {
 
     private int colorBack;
     private int colortext;
+    private int colorCard;
+    private float cornerRadius;
     private String ttile_, decs, act;
 
     // ================== VIEWS ========================= //
@@ -79,6 +84,8 @@ private Boolean balean;
             decs = ff.getString(key_desc_wt);
             balean = ff.getBoolean(key_visi);
             snim = ff.getString(key_anim);
+            cornerRadius = ff.getInt(key_margin);
+            colorCard = ff.getInt(key_color_card);
         }
     }
 
@@ -95,6 +102,15 @@ private Boolean balean;
         Animation ad = AnimationUtils.loadAnimation(getContext(), R.anim.gobutton);
         lay.startAnimation(anim);
         cardView = lay.findViewById(R.id.background);
+
+        if(colorCard != 0){
+            cardView.setCardBackgroundColor(colorCard);
+        }
+
+        if(cornerRadius != 0){
+            cardView.setRadius(cornerRadius);
+        }
+
         action = lay.findViewById(R.id.clickon);
         action.startAnimation(ad);
         title = lay.findViewById(R.id.title_wet);

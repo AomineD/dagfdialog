@@ -65,6 +65,13 @@ public void setSpeedAnim(long speed){
         bundles.putLong(WetFragment.key_speed, speed);
 }
 
+public void setCardRadius(float radius){
+    bundles.putFloat(WetFragment.key_margin, radius);
+}
+
+public void setCardColor(int colour){
+    bundles.putInt(WetFragment.key_color_card, colour);
+}
 
 public void Show(wetListener ok){
         fragment.flis = ok;
