@@ -84,7 +84,7 @@ private Boolean balean;
             decs = ff.getString(key_desc_wt);
             balean = ff.getBoolean(key_visi);
             snim = ff.getString(key_anim);
-            cornerRadius = ff.getInt(key_margin);
+            cornerRadius = ff.getFloat(key_margin);
             colorCard = ff.getInt(key_color_card);
         }
     }

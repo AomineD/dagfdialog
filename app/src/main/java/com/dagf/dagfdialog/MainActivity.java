@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
        // wetDialog.setHeigh(35);
 
+
+        wetDialog.setCardRadius(5);
+        wetDialog.setCardColor(getResources().getColor(R.color.bl));
         wetDialog.setTexts("Notificacion importante", "Si quieres acceder a toda nuestra multimedia inicia sesión ahora, y disfruta de las mejores pelis y bla bla bla bla si mucho bla bla, demasiado bla bla para este parrafo a ver si dejo de escribir babosadas bro y programo en serio, no pero de", "Ir");
 
         wetDialog.settColor(getResources().getColor(R.color.colorAccent), getResources().getColor(R.color.ajj));
