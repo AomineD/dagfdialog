@@ -38,7 +38,8 @@ public class WetFragment extends Fragment {
     public static final String key_visi = "KKSDWLASMMM";
 
     public static final String key_color_card = "AJDASJDAJSD";
-    public static final String key_margin = "JASJDAJSDJA";
+    public static final String key_radius = "JASJDAJSDJA";
+    public static final String key_margin = "JAJAJAJsD";
 
     private long speed;
     private String descriptionw;
@@ -49,6 +50,7 @@ public class WetFragment extends Fragment {
     private int colortext;
     private int colorCard;
     private float cornerRadius;
+    private int margins;
     private String ttile_, decs, act;
 
     // ================== VIEWS ========================= //
@@ -84,8 +86,9 @@ private Boolean balean;
             decs = ff.getString(key_desc_wt);
             balean = ff.getBoolean(key_visi);
             snim = ff.getString(key_anim);
-            cornerRadius = ff.getFloat(key_margin);
-            colorCard = ff.getInt(key_color_card);
+
+            cornerRadius = ff.getFloat(key_radius);
+            margins = ff.getInt(key_margin);
         }
     }
 
@@ -102,11 +105,6 @@ private Boolean balean;
         Animation ad = AnimationUtils.loadAnimation(getContext(), R.anim.gobutton);
         lay.startAnimation(anim);
         cardView = lay.findViewById(R.id.background);
-
-        if(colorCard != 0){
-            cardView.setCardBackgroundColor(colorCard);
-        }
-
         if(cornerRadius != 0){
             cardView.setRadius(cornerRadius);
         }
@@ -148,7 +146,11 @@ private Boolean balean;
         action.setTextColor(colortext);
         dec.setTextColor(colortext);
         title.setText(ttile_);
+
 dec.setText(decs);
+        LinearLayout.LayoutParams l = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        l.setMargins(margins, 0, margins, 0);
+        dec.setLayoutParams(l);
 action.setText(act);
 
 
